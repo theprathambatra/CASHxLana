@@ -62,6 +62,8 @@
   filter: saturate(1.015) contrast(1.02);
 }
 
+#loader[hidden] { display: none !important; }
+
 @media (max-width: 700px) {
   .lana-wordmark { width: 94px; top: -1px; }
   .locker-title { max-width: 128px; font-size: 14px; }
