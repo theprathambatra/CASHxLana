@@ -1,4 +1,72 @@
-/* final hero composition */
-.media-frame{width:min(62vw,820px);min-width:360px;max-height:68vh;aspect-ratio:16/9;transform:rotate(-.25deg)}
-.media-frame img,.media-frame video{object-fit:cover}
-@media(max-width:700px){.hero-center{padding:104px 12px 190px}.media-frame{width:min(90vw,640px);min-width:0;max-height:48vh;aspect-ratio:16/9}.love-copy{max-width:64vw}}
+/* Final CASHxLANA composition */
+.hero-top { align-items: flex-start; }
+
+.lana-wordmark {
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  transform: translateX(-50%);
+  width: clamp(96px, 10vw, 152px);
+  height: auto;
+  opacity: 0.94;
+  mix-blend-mode: multiply;
+  filter: contrast(1.12);
+  pointer-events: none;
+}
+
+.chromatic-card { background: #eee3dd; }
+.chromatic-card img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chromatic-card canvas { z-index: 2; opacity: 0; }
+.chromatic-card.ready canvas { opacity: 1; }
+.heart-cursor { z-index: 7; }
+
+.hero-center {
+  z-index: 3;
+  padding: 68px 0 112px;
+  overflow: hidden;
+}
+.media-frame {
+  position: relative;
+  width: min(88vw, 570px);
+  aspect-ratio: 570 / 700;
+  min-width: 0;
+  max-height: min(72vh, 700px);
+  margin: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  border: 0;
+}
+.media-frame::after { display: none; }
+.media-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+  background: transparent;
+  clip-path: ellipse(48% 49% at 50% 50%);
+  -webkit-clip-path: ellipse(48% 49% at 50% 50%);
+  filter: saturate(1.015) contrast(1.02);
+}
+
+@media (max-width: 700px) {
+  .lana-wordmark { width: 94px; top: -1px; }
+  .locker-title { max-width: 128px; font-size: 14px; }
+  .weather-stack { min-width: 124px; }
+  .hero-center { padding: 92px 0 172px; }
+  .media-frame { width: min(94vw, 520px); max-height: 64vh; }
+  .love-copy { max-width: 64vw; }
+}
