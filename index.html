@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#dbe8f1" />
+  <title>Cash's Private Music Locker</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <section id="loader" class="screen loader" aria-label="Entrance">
+    <div class="loader-shell">
+      <button id="chromaticCard" class="chromatic-card" type="button" aria-label="Enter Cash's private music locker">
+        <img id="loaderFallback" src="./assets/loader.jpg" alt="Vintage performance portrait" />
+        <canvas id="chromaticCanvas" aria-hidden="true"></canvas>
+        <span id="heartCursor" class="heart-cursor" aria-hidden="true">🤍</span>
+      </button>
+      <button id="enterText" class="enter-text" type="button">Tap on the image and unveil magic</button>
+    </div>
+  </section>
+
+  <div id="softLoad" class="soft-load" aria-hidden="true">
+    <span class="soft-ring"></span>
+    <span class="soft-heart">🤍</span>
+  </div>
+
+  <main id="hero" class="screen hero" aria-hidden="true">
+    <canvas id="cloudCanvas" aria-hidden="true"></canvas>
+    <div class="hero-wash" aria-hidden="true"></div>
+
+    <header class="hero-top">
+      <div class="locker-title">Cash's private music locker</div>
+      <div class="weather-stack" aria-live="polite">
+        <div id="dateText">—</div>
+        <div id="timeText">—</div>
+        <div id="weatherText">weather · locating…</div>
+      </div>
+    </header>
+
+    <div class="hero-center">
+      <figure class="media-frame">
+        <img id="heroFallback" src="./assets/loader.jpg" alt="Soft vintage center visual" />
+        <video id="heroVideo" src="./assets/hero.mp4" poster="./assets/loader.jpg" muted loop autoplay playsinline preload="auto"></video>
+      </figure>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="love-copy">
+        <p>Cash's love for Lana deserved a little something special.</p>
+        <button id="flowerButton" class="flower-button" type="button">shower flowers ♡</button>
+      </div>
+
+      <nav class="music-controls" aria-label="Music controls">
+        <button id="prevBtn" type="button" aria-label="Previous preview" disabled>‹</button>
+        <button id="playBtn" type="button" aria-label="Play preview" disabled>▶</button>
+        <button id="nextBtn" type="button" aria-label="Next preview" disabled>›</button>
+      </nav>
+    </div>
+
+    <div id="trackToast" class="track-toast" aria-live="polite"></div>
+  </main>
+
+  <audio id="audio" preload="auto"></audio>
+  <script src="./app.js"></script>
+</body>
+</html>
