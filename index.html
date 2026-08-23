@@ -13,7 +13,7 @@
   <section id="loader" class="screen loader" aria-label="Entrance">
     <div class="loader-shell">
       <button id="chromaticCard" class="chromatic-card" type="button" aria-label="Enter Cash's private music locker">
-        <img id="loaderFallback" src="./assets/loader.jpg" alt="Vintage performance portrait" />
+        <img id="loaderFallback" alt="Vintage performance portrait" />
         <canvas id="chromaticCanvas" aria-hidden="true"></canvas>
         <span id="heartCursor" class="heart-cursor" aria-hidden="true">🤍</span>
       </button>
@@ -35,14 +35,14 @@
       <div class="weather-stack" aria-live="polite">
         <div id="dateText">—</div>
         <div id="timeText">—</div>
-        <div id="weatherText">weather · locating…</div>
+        <div id="weatherText">weather · waiting</div>
       </div>
     </header>
 
     <div class="hero-center">
       <figure class="media-frame">
-        <img id="heroFallback" src="./assets/loader.jpg" alt="Soft vintage center visual" />
-        <video id="heroVideo" src="./assets/hero.mp4" poster="./assets/loader.jpg" muted loop autoplay playsinline preload="auto"></video>
+        <img id="heroFallback" alt="Soft vintage center visual" />
+        <video id="heroVideo" src="./assets/hero.mp4" muted loop autoplay playsinline preload="auto"></video>
       </figure>
     </div>
 
@@ -63,6 +63,7 @@
   </main>
 
   <audio id="audio" preload="auto"></audio>
+  <script src="./assets/loader-data.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
