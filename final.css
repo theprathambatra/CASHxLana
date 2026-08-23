@@ -64,6 +64,34 @@
 
 #loader[hidden] { display: none !important; }
 
+.falling-flower {
+  position: fixed;
+  top: -48px;
+  z-index: 9999;
+  pointer-events: none;
+  line-height: 1;
+  opacity: 0;
+  filter: drop-shadow(0 3px 8px rgba(103,67,70,.18));
+  animation-name: flowerFall;
+  animation-timing-function: cubic-bezier(.18,.72,.32,1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes flowerFall {
+  0% { transform: translate3d(0,-40px,0) rotate(0deg); opacity: 0; }
+  8% { opacity: .95; }
+  90% { opacity: .9; }
+  100% { transform: translate3d(var(--drift,0px),calc(100vh + 100px),0) rotate(var(--spin,540deg)); opacity: 0; }
+}
+
+#flowerButton {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .lana-wordmark { width: 94px; top: -1px; }
   .locker-title { max-width: 128px; font-size: 14px; }
