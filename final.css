@@ -1,0 +1,4 @@
+/* final hero composition */
+.media-frame{width:min(62vw,820px);min-width:360px;max-height:68vh;aspect-ratio:16/9;transform:rotate(-.25deg)}
+.media-frame img,.media-frame video{object-fit:cover}
+@media(max-width:700px){.hero-center{padding:104px 12px 190px}.media-frame{width:min(90vw,640px);min-width:0;max-height:48vh;aspect-ratio:16/9}.love-copy{max-width:64vw}}
