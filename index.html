@@ -7,6 +7,7 @@
   <title>Cash's Private Music Locker</title>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./compat.css" />
+  <link rel="stylesheet" href="./final.css" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -14,7 +15,7 @@
   <section id="loader" class="screen loader" aria-label="Entrance">
     <div class="loader-shell">
       <button id="chromaticCard" class="chromatic-card" type="button" aria-label="Enter Cash's private music locker">
-        <img id="loaderFallback" alt="Vintage performance portrait" />
+        <img id="loaderFallback" src="./assets/loader.jpg" alt="Vintage performance portrait" />
         <canvas id="chromaticCanvas" aria-hidden="true"></canvas>
         <span id="heartCursor" class="heart-cursor" aria-hidden="true">🤍</span>
       </button>
@@ -42,8 +43,8 @@
 
     <div class="hero-center">
       <figure class="media-frame">
-        <img id="heroFallback" alt="Soft vintage center visual" />
-        <video id="heroVideo" src="./assets/hero.mp4" muted loop autoplay playsinline preload="auto"></video>
+        <img id="heroFallback" src="./assets/loader.jpg" alt="Soft vintage center visual" />
+        <video id="heroVideo" poster="./assets/loader.jpg" muted loop autoplay playsinline preload="auto"></video>
       </figure>
     </div>
 
@@ -65,6 +66,14 @@
 
   <audio id="audio" preload="auto"></audio>
   <script src="./assets/loader-data.js"></script>
+  <script src="./assets/video-parts/part0.js"></script>
+  <script src="./assets/video-parts/part1.js"></script>
+  <script src="./assets/video-parts/part2.js"></script>
+  <script src="./assets/video-parts/part3.js"></script>
+  <script src="./assets/video-parts/part4.js"></script>
+  <script src="./assets/video-parts/part5.js"></script>
+  <script src="./assets/video-parts/part6.js"></script>
   <script src="./app-v2.js"></script>
+  <script src="./video-loader.js"></script>
 </body>
 </html>
